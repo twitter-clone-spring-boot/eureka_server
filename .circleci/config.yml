@@ -4,6 +4,8 @@ orbs:
 workflows:
   build-and-publish-docker-image:
     jobs:
+      - build:
+          context: twitter_clone_creds
       - docker/publish:
           image: sanchitbansal10/twitter_clone
           tag: eureka_server
